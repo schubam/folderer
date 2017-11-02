@@ -1,0 +1,19 @@
+{
+  "name": "folderer",
+  "version": "0.1.0",
+  "description": "Organizes files into sub-folders based their file extension",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^4.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Marc Schuba <me@schubam.com>",
+  "license": "MIT"
+}

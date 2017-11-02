@@ -131,6 +131,6 @@ $ tree /my/folder/with/books
 3 directories, 50 files
 ```
 
-Advise
+Advice
 ------
 Use with caution and on your own risk. There are not many error checks and you may lose data.

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const {join} = require('path');
+const {join,extname} = require('path');
 
 class Folderer {
     constructor(path) {
@@ -13,7 +13,7 @@ class Folderer {
 
     extensions() {
         return fs.readdirSync(this.path)
-            .map(file => file.split('.')[1])
+            .map(file => extname(file).split('.')[1])
             .reduce((memo, extension) => {
                 if (extension && memo.indexOf(extension) === -1) {
                     memo.push(extension);
@@ -37,7 +37,7 @@ class Folderer {
         files
             .filter(file => !fs.lstatSync(join(this.path, file)).isDirectory())
             .forEach(file => {
-                const extension = file.split('.')[1];
+                const extension = extname(file).split('.')[1];
                 if (extension) {
                     const destination = join(this.path, extension, file);
                     fs.renameSync(join(this.path, file), destination);
